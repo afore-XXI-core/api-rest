@@ -19,7 +19,9 @@ public class SpringBootBackendApirestApplicationTests {
 	
 	@Test
 	public void contextLoads() {
+		// no sirvio de nada el assertThat
 		assertThat(controller).isNotNull();
+		// la opción -Dmaven.test.skip=true en los parametros se salta el test y termina la compilación		
 	}
 
 }
