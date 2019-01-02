@@ -38,6 +38,9 @@ public class ClienteRestController {
 		return clienteService.findByid(id);
 	}
 	
+/*
+ * Sonar sugiere reemplazar a la clase Cliente con un simple POJO o DTO object
+ */
 	@PostMapping("/clientes")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Cliente create(@RequestBody Cliente cliente) {
