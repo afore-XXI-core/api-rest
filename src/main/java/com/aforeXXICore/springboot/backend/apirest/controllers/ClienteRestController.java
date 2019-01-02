@@ -39,7 +39,7 @@ public class ClienteRestController {
 	}
 	
 /*
- * Sonar sugiere reemplazar a la clase Cliente con un simple POJO o DTO object
+ * Sonar sugiere reemplazar a la clase Cliente con un simple POJO o DTO object 
  */
 	@PostMapping("/clientes")
 	@ResponseStatus(HttpStatus.CREATED)
