@@ -1,4 +1,4 @@
-package com.aforeXXICore.springboot.backend.apirest;
+package com.aforexxicore.springboot.backend.apirest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

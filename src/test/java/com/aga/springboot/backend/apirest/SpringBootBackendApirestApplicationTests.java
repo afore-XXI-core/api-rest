@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.aforeXXICore.springboot.backend.apirest.controllers.HomeController;
+import com.aforexxicore.springboot.backend.apirest.controllers.HomeController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

@@ -1,4 +1,4 @@
-package com.aforeXXICore.springboot.backend.apirest.controllers;
+package com.aforexxicore.springboot.backend.apirest.controllers;
 
 
 import java.util.List;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aforeXXICore.springboot.backend.apirest.models.entity.Cliente;
-import com.aforeXXICore.springboot.backend.apirest.models.services.IClienteService;
+import com.aforexxicore.springboot.backend.apirest.models.entity.Cliente;
+import com.aforexxicore.springboot.backend.apirest.models.services.IClienteService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController

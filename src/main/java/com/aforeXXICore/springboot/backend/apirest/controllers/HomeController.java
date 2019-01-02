@@ -1,4 +1,4 @@
-package com.aforeXXICore.springboot.backend.apirest.controllers;
+package com.aforexxicore.springboot.backend.apirest.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

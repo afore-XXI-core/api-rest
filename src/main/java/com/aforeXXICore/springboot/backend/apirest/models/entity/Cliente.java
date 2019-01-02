@@ -1,4 +1,4 @@
-package com.aforeXXICore.springboot.backend.apirest.models.entity;
+package com.aforexxicore.springboot.backend.apirest.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
