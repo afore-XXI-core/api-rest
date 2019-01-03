@@ -24,3 +24,4 @@ INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('John', 'Smith'
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Joe', 'Bloggs', 'joe.bloggs@gmail.com', '2017-08-23');
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('John', 'Stiles', 'john.stiles@gmail.com', '2017-08-24');
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Richard', 'Roe', 'stiles.roe@gmail.com', '2017-08-25');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Angeliux', 'Galici', 'angel.galicia@capgemini.com', '2019-01-04');
