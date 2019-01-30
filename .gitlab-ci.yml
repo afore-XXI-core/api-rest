@@ -1,4 +1,4 @@
-image: java:8
+image: java:7
 
 stages:
   - build
@@ -9,7 +9,7 @@ build:
   script: ./mvnw package
   artifacts:
     paths:
-      - target/demo-0.0.1-SNAPSHOT.jar
+      - target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
 
 production:
   stage: deploy
