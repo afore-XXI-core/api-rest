@@ -1,6 +1,7 @@
 image: java:8
 
 stages:
+  - chmod +x mvnw
   - build
   - deploy
 
