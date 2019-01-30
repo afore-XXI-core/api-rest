@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.aforexxicore.springboot.backend.apirest.controllers.HomeController;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 public class SpringBootBackendApirestApplicationTests {
 
 	@Autowired
