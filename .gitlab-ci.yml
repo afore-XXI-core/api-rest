@@ -20,7 +20,7 @@ sonarqube_master_job:
   only:
     - master
   script:
-    - ./mvnw --batch-mode verify sonar:sonar -Dsonar.host.url=http://local.sonarqube.com:9000 -Dsonar.login=admin -Dsonar.password=admin
+    - ./mvnw sonarqube -Dsonar.host.url=https://sonarqube.ow2.org
 
 production:
   stage: deploy
