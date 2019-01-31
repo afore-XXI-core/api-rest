@@ -15,12 +15,12 @@ build:
     paths:
       - target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
 
-test_sonar_preview_job:
+sonarqube_master_job:
   stage: test
-  script:
-  - mvn package sonar:sonar -Dsonar.host.url=https://sonar.yourdomain.tld/ 
   only:
-  - master
+    - master
+  script:
+    - mvn --batch-mode verify sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin
 
 production:
   stage: deploy
