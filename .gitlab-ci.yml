@@ -26,7 +26,7 @@ sonarqube_master_job:
     - master
   image: maven:3.3.9-jdk-8-alpine
   script:
-    - mvn --batch-mode verify sonar:sonar -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_LOGIN -Dsonar.password=$SONAR_PASSWORD
+    - mvn --batch-mode verify sonar:sonar -Dsonar.web.host=sonarqube
     
 production:
   stage: deploy
