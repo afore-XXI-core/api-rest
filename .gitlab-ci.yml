@@ -1,9 +1,7 @@
 image: java:8
 
 variables:
-  SONAR_URL: "http://localhost:9000"
-  SONAR_LOGIN: "admin"
-  SONAR_PASSWORD: "admin"
+    MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
 
 before_script:
     - chmod +x mvnw
@@ -26,7 +24,7 @@ sonarqube_master_job:
     - master
   image: maven:3.3.9-jdk-8-alpine
   script:
-    - mvn --batch-mode verify sonar:sonar
+    - ./mvnw $MAVEN_CLI_OPTS sonar:sonar
     
 production:
   stage: deploy
