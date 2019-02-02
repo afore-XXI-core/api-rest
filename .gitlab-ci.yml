@@ -12,9 +12,9 @@ before_script:
     
 stages:
   - build
-  - test
   - deploy
-
+  - sonar
+  
 build:
   stage: build
   script: ./mvnw package
@@ -22,10 +22,8 @@ build:
     paths:
       - target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
 
-sonarqube_master_job:
-  stage: test
-  only:
-    - master
+sonar:
+  stage: sonar
   script:
     - ./mvnw $MAVEN_CLI_OPTS sonar:sonar
     
