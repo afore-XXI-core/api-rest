@@ -12,7 +12,6 @@ before_script:
     
 stages:
   - build
-  - sonar
   - deploy
   
 build:
@@ -31,6 +30,8 @@ production:
   stage: deploy
   script:
   - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
+  - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io
   - ./cf push
   only:
   - master
+  
