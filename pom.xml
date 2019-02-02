@@ -61,5 +61,17 @@
 			</plugin>
 		</plugins>
 	</build>
+    
+    <distributionManagement>
+    <snapshotRepository>
+      <id>ow2.snapshot</id>
+      <name>OW2 Snapshots Nexus repository</name>
+      <url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <site>
+      <id>quickstart.site</id>
+      <url>http://quickstart.url.site</url>
+    </site>
+  </distributionManagement>
 
 </project>
