@@ -1,12 +1,5 @@
 image: java:8
 
-variables:
-    MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
-
-cache:
-  paths:
-    - .m2/repository
-
 before_script:
     - chmod +x mvnw
     
@@ -21,11 +14,6 @@ build:
     paths:
       - target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
 
-sonar:
-  stage: sonar
-  script:
-    - ./mvnw $MAVEN_CLI_OPTS sonar:sonar
-    
 production:
   stage: deploy
   script:
