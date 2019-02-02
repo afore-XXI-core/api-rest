@@ -12,8 +12,8 @@ before_script:
     
 stages:
   - build
-  - deploy
   - sonar
+  - deploy
   
 build:
   stage: build
