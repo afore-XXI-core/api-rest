@@ -6,6 +6,8 @@ before_script:
 stages:
   - build
   - deploy
+
+web: ./app
   
 build:
   stage: build
