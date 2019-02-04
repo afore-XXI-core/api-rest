@@ -12,7 +12,7 @@ build:
   script: ./mvnw package
   artifacts:
     paths:
-      - target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
+      - /builds/angelGaliciaA/api-rest/target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
 
 production:
   stage: deploy
