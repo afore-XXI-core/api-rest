@@ -1,5 +1,5 @@
 applications:
     - name: afore-xxi-core-demo
-	  random-route: true
-	  memory: 512M
-	  path: target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
+    random-route: true
+    memory: 512M
+    path: target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
