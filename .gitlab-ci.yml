@@ -19,8 +19,7 @@ production:
   script:
   - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
   - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io -o afore-xxi-core.org -s development
-  - ./cf create-buildpack binary_buildpack
-  - ./cf push app-afore-xxi-core -b binary_buildpack
+  - ./cf push app-afore-xxi-core -b java_buildpack
   - ./cf logs app-afore-xxi-core --recent
   only:
   - master
