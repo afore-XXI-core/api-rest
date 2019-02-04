@@ -18,7 +18,7 @@ production:
   stage: deploy
   artifacts:
       paths:
-        - target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
+        - /builds/angelGaliciaA/api-rest/target/afore-xxi-demo-0.0.1-SNAPSHOT.jar
   script:
   - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
   - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io -o afore-xxi-core.org -s development
