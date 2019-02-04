@@ -2,10 +2,6 @@ image: java:8
 
 before_script:
     - chmod +x mvnw
-    - echo $CI_BUILD_REF
-    - echo $CI_PROJECT_DIR
-    - mkdir $CI_PROJECT_DIR/target
-    - ls $CI_PROJECT_DIR/target
 
 after_script:
     - ls /builds/angelGaliciaA/api-rest/target/
@@ -16,8 +12,11 @@ stages:
 
 build:
   stage: build
-  script: ./mvnw clean package install
-
+  script: ./mvnw clean package
+  artifacts:
+    paths:
+        - target/
+  
 production:
   stage: deploy
   script:
