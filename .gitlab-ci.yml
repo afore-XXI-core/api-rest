@@ -8,7 +8,7 @@ before_script:
     - ls $CI_PROJECT_DIR/target
 
 after_script:
-    - ls /root/.m2/repository/com/aforexxicore/springboot/backend/api-rest/spring-boot-backend-api-rest/
+    - ls $CI_PROJECT_DIR/target
     
 stages:
   - build
