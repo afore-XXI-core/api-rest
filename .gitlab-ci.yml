@@ -7,9 +7,6 @@ before_script:
     - mkdir $CI_PROJECT_DIR/target
     - ls $CI_PROJECT_DIR/target
 
-after_script:
-    - ls $CI_PROJECT_DIR/target
-    
 stages:
   - build
   - deploy
