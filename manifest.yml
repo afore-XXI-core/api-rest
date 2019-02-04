@@ -2,4 +2,4 @@
 applications:
 - name: afore-xxi-demo
   memory: 512M
-  path: /root/.m2/repository/com/aforexxicore/springboot/backend/api-rest/spring-boot-backend-api-rest/0.0.1-SNAPSHOT/spring-boot-backend-api-rest-0.0.1-SNAPSHOT.jar
+  path: $CI_PROJECT_DIR/target/spring-boot-backend-api-rest-0.0.1-SNAPSHOT.jar
