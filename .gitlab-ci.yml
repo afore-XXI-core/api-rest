@@ -20,9 +20,6 @@ build:
 
 test_sonar:
   stage: test
-  except:
-    - master
-    - tags
   script:
     - ./mvnw --batch-mode verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar -Dsonar.host.url=$SONAR_OFF_URL -Dsonar.login=$SONAR_OFF_LOGIN -Dsonar.branch.name=$CI_COMMIT_REF_NAME
   tags:
