@@ -8,6 +8,7 @@ after_script:
 
 stages:
   - build
+  - test
   - deploy
 
 build:
@@ -16,6 +17,25 @@ build:
   artifacts:
     paths:
         - target/spring-boot-backend-api-rest-0.0.1-SNAPSHOT.jar
+
+test_sonar:
+  stage: test
+  except:
+    - master
+    - tags
+  script:
+    - mvn --batch-mode verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar -Dsonar.host.url=$SONAR_OFF_URL -Dsonar.login=$SONAR_OFF_LOGIN -Dsonar.branch.name=$CI_COMMIT_REF_NAME
+  tags:
+    - docker
+test_sonar_job:
+  stage: test
+  only:
+    - master
+  script:
+    - mvn --batch-mode verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_LOGIN
+    - mvn --batch-mode verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar -Dsonar.host.url=$SONAR_OFF_URL -Dsonar.login=$SONAR_OFF_LOGIN
+  tags:
+    - docker
   
 production:
   stage: deploy
