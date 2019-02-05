@@ -1,5 +1,0 @@
----
-applications:
-- name: afore-xxi-demo
-  memory: 512M
-  path: target/spring-boot-backend-api-rest-0.0.1-SNAPSHOT.jar
