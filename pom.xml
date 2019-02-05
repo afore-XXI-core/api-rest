@@ -19,9 +19,26 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		
+        <sonar.version>7.0</sonar.version>
+        <sonar.pluginName>GitLab</sonar.pluginName>
+        <sonar.pluginClass>com.talanlabs.sonar.plugins.gitlab.GitLabPlugin</sonar.pluginClass>
+
 	</properties>
 
 	<dependencies>
+        <dependency>
+          <groupId>org.sonarsource.sonarqube</groupId>
+          <artifactId>sonar-plugin-api</artifactId>
+          <version>${sonar.version}</version>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.sonarsource.sonarqube</groupId>
+          <artifactId>sonar-ws</artifactId>
+          <version>${sonar.version}</version>
+        </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
