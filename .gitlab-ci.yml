@@ -20,7 +20,7 @@ build:
 
 test_sonar:
   stage: test
- except:
+  except:
     - master
     - tags
   script:
