@@ -23,7 +23,7 @@ test_sonar:
   only:
     - master
   script:
-    - ./mvnw sonar:sonar
+    - ./mvnw -Psonar sonar:sonar
 
 production:
   stage: deploy
