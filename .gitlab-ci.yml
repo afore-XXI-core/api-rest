@@ -32,7 +32,7 @@ test_sonar:
     SONAR_GITLAB_COMMENT: "true"
     SONAR_PUBLISH: "true"
   script:
-    - ./mvnw sonar:sonar -Dsonar.host.url=http://18.215.204.67:9000 -Dsonar.login=admin -Dsonar.password=admin -Dsonar.projectKey=api-rest
+    - ./mvnw sonar:sonar -U -Dsonar.host.url=http://18.215.204.67:9000 -Dsonar.login=admin -Dsonar.password=admin -Dsonar.projectKey=api-rest
 
 production:
   stage: deploy
