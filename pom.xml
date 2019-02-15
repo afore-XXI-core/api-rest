@@ -73,6 +73,12 @@
 			<sonar.host.url>
 			http://18.215.204.67:9000
 			</sonar.host.url>
+			<sonar.login>
+				admin
+			</sonar.login>
+			<sonar.password>
+				admin
+			</sonar.password>
 			</properties>
 		</profile>
 	</profiles>
