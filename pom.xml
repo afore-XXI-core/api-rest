@@ -79,6 +79,9 @@
 			<sonar.password>
 				admin
 			</sonar.password>
+			<sonar.projectKey>
+				spring-boot-backend-api-rest
+			</sonar.projectKey>
 			</properties>
 		</profile>
 	</profiles>
