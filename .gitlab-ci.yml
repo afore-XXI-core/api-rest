@@ -20,13 +20,19 @@ build:
 
 test_sonar:
   stage: test
-  except:
+  only:
     - master
-    - tags
+  image: hiorgserver/gitlab-sonar-scanner
+  variables:
+    SONAR_URL: "http://localhost:9000"
+    SONAR_TOKEN: "fvV3eC9UkwNsEHaKhG1e"
+    SONAR_PROJECT_KEY: "spring-boot-backend-api-rest"
+    SONAR_PROJECT_NAME: "spring-boot-backend-api-rest"
+    SONAR_PROJECT_VERSION: "1.0"
+    SONAR_GITLAB_COMMENT: "true"
+    SONAR_PUBLISH: "true"
   script:
-    - ./mvnw --batch-mode verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar -Dsonar.host.url=$SONAR_OFF_URL -Dsonar.login=$SONAR_OFF_LOGIN -Dsonar.branch.name=$CI_COMMIT_REF_NAME
-  tags:
-    - docker
+    - ./mvnw sonar:sonar -U -Dsonar.host.url=http://18.215.204.67:9000 -Dsonar.login=admin -Dsonar.password=admin -Dsonar.projectKey=api-rest
 
 production:
   stage: deploy
